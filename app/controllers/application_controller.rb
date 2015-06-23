@@ -1,7 +1,12 @@
 class ApplicationController < ActionController::Base
+  # Prevent CSRF attacks by raising an exception.
+  # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+
   before_filter :current_user
-  skip_before_action :verify_authenticity_token
+  # Run 'current_user' before every controller action
+
+  # skip_before_action :verify_authenticity_token
 
   def current_user
     if @current_user.nil?
@@ -15,14 +20,8 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user!
     unless current_user
-      render_response({ response: "you must be logged in to do that." }, 200)
-      true
+      flash[:alert] = "you must be logged in to do that."
+      redirect_to login_path
     end
-  end
-
-  private
-
-  def render_response(response, response_code)
-    render json: response, status: response_code
   end
 end
