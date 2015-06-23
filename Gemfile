@@ -56,3 +56,4 @@ end
 gem 'bootstrap-sass'
 gem 'faker'
 gem 'react-rails'
+gem 'bcrypt'
