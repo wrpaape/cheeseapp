@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :cheeses
+  resources :users
   resources :users, :cheeses
 
   get  'login', to: 'sessions#new',    as: 'login'
