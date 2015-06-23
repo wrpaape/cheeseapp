@@ -1,3 +1,29 @@
-// Place all the styles related to the cheeses controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.title{
+  font-size: 3em;
+  height: 1em;
+  padding-bottom: 1.5em;
+  text-decoration: underline;
+}
+
+.variety-row{
+  margin: 1.5em;
+}
+
+.variety{
+  background: grey;
+  padding: 1.5em;
+  padding-top: 0;
+}
+
+.variety-title{
+  font-size: 2em;
+  height: 2em;
+  line-height: 1em;
+  padding: 0.5em;
+}
+
+.name-title{
+  font-size: 1.2em;
+  height: 1em;
+  padding-bottom: 1.5em;
+}

@@ -1,6 +1,7 @@
 class CheesesController < ApplicationController
   def index
-    @cheeses = Cheese.all
+    @cheeses = {}
+    Cheese.uniq.pluck(:variety).each { |variety| @cheeses[variety] = Cheese.where(variety: variety) }
   end
 
   def new

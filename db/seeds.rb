@@ -13,8 +13,9 @@ initial_varieties = ["Fresh Soft", "Fresh Firm", "Soft", "Semi-soft", "Semi-Hard
 
 initial_names.each do |name|
   rand(initial_varieties.size).times do
+    variety = initial_varieties.sample until Cheese.find_by(name: name, variety: variety).nil?
     Cheese.create(name: name,
-                  variety: initial_varieties.sample,
+                  variety: variety,
                   user_id: User.all.sample.id)
   end
 end
