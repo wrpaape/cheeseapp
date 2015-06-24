@@ -1,0 +1,19 @@
+<%= form_tag create_session_path, class: "form-group center" do %>
+  <div class="form-inline">
+    <div class="col-sm-12 form-group"></br>
+      <label for="name">name         </label>
+      <%= text_field_tag(:name, nil, { placeholder: "john smith", id: "name" })  %>
+    </div>
+  </div>
+  <div class="form-inline">
+    <div class="col-sm-12 form-group"></br>
+      <label for="password">password  </label>
+      <%= password_field_tag(:password, nil, { id: "password", type: "password" })  %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12"></br>
+      <%= submit_tag "submit", class: "btn btn-default" %>
+    </div>
+  </div>
+<% end %>

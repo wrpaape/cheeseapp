@@ -3,7 +3,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if user User.find_by(name: params[:name]) && user.authenticate(params[:password])
+    user = User.find_by(name: params[:name])
+    if user && user.authenticate(params[:password])
       # If the user exists AND the password entered is correct.
       # Save the user id inside a browser cookie.
       # Specifically, the rails 'session'. This is how we keep the user

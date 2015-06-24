@@ -9,7 +9,19 @@
 <body>
   <div class="container">
     <div class="row">
-      <%= react_component("Navigation") %>
+      <div class="col-sm-9">
+        <%= react_component("Navigation") %>
+      </div>
+      <div class="col-sm-3"> 
+        <% if flash[:notice] || flash[:alert] %>
+          <% flash.each do |name, msg| %>
+            <%= content_tag(:div, msg, { class: "flash #{name}", id: "notice" }) %>
+          <% end %>
+        <% end %>
+      </div>
+<!--       <div class="col-sm-3">
+        <div id="notice" class="notice"><%= notice %></div>
+      </div> -->
     </div>
     <div class="row">
       <%= yield %>

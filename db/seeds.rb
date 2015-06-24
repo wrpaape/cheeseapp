@@ -12,8 +12,7 @@ initial_names = ["Limburger", "Abbaye de Belloc", "Blue", "Brie", "Queso Fresco"
 initial_varieties = ["Fresh Soft", "Fresh Firm", "Soft", "Semi-soft", "Semi-Hard", "Hard", "Semi-Firm", "Firm"]
 
 initial_names.each do |name|
-  rand(initial_varieties.size).times do
-    variety = initial_varieties.sample until Cheese.find_by(name: name, variety: variety).nil?
+  initial_varieties.sample(rand(initial_varieties.size)).each do |variety|
     Cheese.create(name: name,
                   variety: variety,
                   user_id: User.all.sample.id)

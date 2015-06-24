@@ -13,6 +13,9 @@
   background: grey;
   padding: 1.5em;
   padding-top: 0;
+  -moz-border-radius: 1em; //for mozilla support
+  -webkit-border-radius: 1em; //for chrome support
+  border-radius: 1em;
 }
 
 .variety-title{

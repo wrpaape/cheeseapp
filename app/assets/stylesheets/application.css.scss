@@ -5,3 +5,23 @@
 @import 'sessions';
 @import 'users';
 //You need to now manually import every other scss file.
+body{
+  background: lighten(black, 85%);
+}
+
+.btn{
+  margin: 1em;
+  margin-bottom: 2em;
+}
+
+.flash{
+  margin-top: 1.30em;
+  display: inline-block;
+  background: lighten(black, 75%);
+  height: 2em;
+  line-height: 1em;
+  padding: 0.5em;
+  -moz-border-radius: 0.5em; //for mozilla support
+  -webkit-border-radius: 0.5em; //for chrome support
+  border-radius: 0.5em;
+}
