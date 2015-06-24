@@ -1,4 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_cheese_path(@cheese) %> |
-<%= link_to 'Back', cheeses_path %>
+<div class="row">
+  <div class="col-sm-2">name:</div>
+  <div class="col-sm-10"><%= @cheese.name %></div>
+</div>
+<div class="row">
+  <div class="col-sm-2">variety:</div>
+  <div class="col-sm-10"><%= @cheese.variety %></div>
+</div>
+<div class="row">
+  <div class="col-sm-2">submitted by:</div>
+  <div class="col-sm-10"><%= @cheese.user.name %></div>
+</div>

@@ -1,14 +1,14 @@
 <%= form_for(@cheese, class: "form-group") do |f| %>
   <div class="form-inline">
     <div class="col-sm-12 form-group"></br>
-      <label for="name" class="control-label">name    </label>
+      <label for="name" class="control-label">name   </label>
       <%= f.text_field(:name, { placeholder: "swiss fondue", id: "name" })  %>
     </div>
   </div>
   <div class="form-inline">
     <div class="col-sm-12 form-group"></br>
       <label for="variety" class="control-label" style="vertical-align: top;">variety</label>
-      <%= f.text_field(:variety, { placeholder: "sauce", id: "variety" })  %>
+      <%= f.text_field(:variety, { placeholder: "sauce", id: "variety", value: "" })  %>
     </div>
   </div>
     <%= f.hidden_field :user_id, value: @current_user.id %>
